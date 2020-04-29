@@ -1,0 +1,17 @@
+﻿@model DisplayImageViewModel
+
+<div class="well">
+    <div class="text-center">
+        <img src="@Model.Image.URL" class="rounded" alt="Responsive image">
+    </div>
+    <br />
+    <div class="col-lg-3 col-lg-offset-5">
+        <button class="btn btn-primary @(Model.Liked ? "disabled" : "") "  id="like-btn" value="@Model.Image.Id">Like</button>
+        <h5 id="number-of-likes"></h5>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/Image.js"></script>
+
+}

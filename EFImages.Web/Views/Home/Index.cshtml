@@ -1,0 +1,13 @@
+﻿@using EFImages.Data
+@model List<Image>
+
+
+    <ul>
+        @foreach (Image i in Model)
+        {
+        <li>
+            <a href="/home/displayimage?id=@i.Id"><img src="@i.URL" class="img-fluid" alt="Responsive image"></a>
+            <a href="/home/displayimage?id=@i.Id">@i.Title</a>
+        </li>
+        }    
+    </ul>
